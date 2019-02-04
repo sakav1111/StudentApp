@@ -1,0 +1,26 @@
+<div class="container">
+
+<div ng-controller="homeController">
+ <div class="p-3 mb-2 bg-info text-white"><h1>  {{title}} </h1></div>
+</div>
+
+<hr>
+<h3>Writing Def. controller, on page load following steps will perform</h3>
+----------------------------------------------------------------------<br>
+- Loads Angulr.js script file<br>
+- Identifies Strating point of Angular App, ie. ng-app & Creates $scope object<br>
+- Identifers the controllers & executes the controllr logics<br>
+- Binds the Data with expresions inside elements i.e. {{ title }}<br>
+ <hr/>
+ 
+ 
+ <h3>$scope vs $rootScope</h3>
+$scope - Object values are avaible only for that perticular Controller<br>
+$rootScope - values Avaible to all controlers in the Application. so it is global varible.
+  <hr/>
+
+<div ng-controller="clickController">
+<h3>User Defiend Functions</h3>
+<button ng-click="showdate()"> Show Date</button>
+</div> 
+</div>

@@ -1,108 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="stApp">
 <head>
-  <title>Student App</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<title>Student App</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </head>
 
+
 <!-- 1.Strating point of AngularJS Application -->
-<body ng-app="stApp">
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Student App</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Add</a></li>
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Delete</a></li>
-       <li><a href="#">Search</a></li>
-       <li><a href="#">Show All</a></li>
-    </ul>
-  </div>
-</nav>
-  
+<body>
 
 
-<div class="container"> 
+	<!-- *************************	NAVIGATION *************************************** -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Student App</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="#/home">Home.html</a></li>
+				<li><a href="#/add"> Add Student</a></li>
+				<li><a href="#/edit"> Edit Student</a></li>
+				<li><a href="#/delete"> Delete Student</a></li>
+				<li><a href="#/show">Show Student</a></li>
+				<li><a href="#/help">Help</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- ************************   NAVIGATION  *********************************** -->
 
-<!-- 
-Writing Def. controller, on page load following steps will perform
-----------------------------------------------------------------------
-- Loads Angulr.js script file
-- Identifies Strating point of Angular App, ie. ng-app & Creates $scope object
-- Identifers the controllers & executes the controllr logics
-- Binds the Data with expresions inside elements i.e. {{ title }}
- -->
-<div ng-controller="homeController">
- <h1> {{ title }} </h1>
+<h1> Welcome, Student</h1>
+<!-- ************************   VIEW  *********************************** -->
+<div class="container">
+
+<div ng-view>
 </div>
-
-<hr>
-
-<div ng-controller="clickController">
-<h3>User Defiend Functions</h3>
-<button ng-click="showdate()"> Show Date</button>
-</div>
-
-
-
 
 
 </div><!--Container ENE  -->
-
-
-
-
-
+<!-- ************************   VIEW  *********************************** -->
 
 
 <hr/>
-<div ng-controller="footerController">
-  {{ footer }}
-</div>
 
-<div class="alert alert-primary" role="alert">
-$scope - Object values are avaible only for that perticular Controller<br>
-$rootScope - values Avaible to all controlers in the Application. so it is global varible.
-</div>
-<hr/>
+<footer class="footer">
+      <div class="container" ng-controller="footerController">
+        <p class="text-muted"> {{ footer }}</p>
+      </div>
+  
+</footer>
 
 
-
-<script>
-/*1. Declaing module & storing it into varible for feature Use */
-var app = angular.module("stApp",[]);
-
-/* 2. Defining Controller logic for Displaying Title */
-app.controller("homeController", function($scope){
-	$scope.title= "SCOPE : Student Appliction";
-})
-
-/* 3. Defining footer logic for RootSCope Title */
-app.controller("footerController", function($scope,$rootScope){
-	$rootScope.footer= "@ 2019 StudentApp ";
-})
-
-/* 4. Clicking User defiend functon */
-app.controller("clickController", function($scope){
-	$scope.showdate = function(){
-		alert("Hello");
-	}
-})
-
-
-</script>
+ 
 
 
 </body>
 </html>
-
 
