@@ -1,14 +1,26 @@
-<div class="card">
-  <div class="card-header">
-  <div class="p-3 mb-2 bg-info text-white"><h1>  {{title}} </h1></div>
-  </div>
-  <div class="card-body">
-   <div class="form-check form-check-inline">
-  <form>
-  <input  type="text" id="sno" >
-  <button type="submit" class="btn btn-primary">Get Student</button>
- </form>
-</div>
-    
-  </div>
+<div class="panel panel-primary" ng-controller="searchController">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{title}}</h3>
+		<div class="form-check form-check-inline">
+			<form ng-submit="searchStudent()" action="">
+				<input type="text" class="form-control" id="sno"
+					ng-model="getForm.sno">
+				<button type="submit" class="btn btn-default">Search
+					Student</button>
+			</form>
+		</div>
+	</div>
+	<div class="panel-body">
+
+		<h3>
+			Sno : {{student.sno}} <br>
+			<hr />
+			Name : {{student.name}} <br>
+			<hr />
+			City : {{student.city}} <br>
+			<hr />
+			Marks : {{student.marks}} <br>
+			<hr />
+		</h3>
+	</div>
 </div>
