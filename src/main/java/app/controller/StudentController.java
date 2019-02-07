@@ -33,6 +33,16 @@ public class StudentController {
 	    return repository.save(student);
 	}	
 	
+	
+	//1.Create a new Student
+		@PostMapping("/addentity")
+		public ResponseEntity<?> createStudentResponnse(@Valid @RequestBody Student student) {
+		     repository.save(student);
+		    return ResponseEntity.ok().build();
+		}	
+		
+	
+	
 	@PostMapping("/update")
 	public Student updateStudent(@Valid @RequestBody Student student) {
 		Student st = repository.findById(student.getSno()).orElse(null);
@@ -70,7 +80,7 @@ public class StudentController {
 	
 	
 	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<?> deleteById(@PathVariable(value = "id") Integer id) {		
+	public ResponseEntity<?> deleteById(@PathVariable (value="id") Integer id) {		
 		repository.deleteById(id);
 	    return ResponseEntity.ok().build();
 	}
