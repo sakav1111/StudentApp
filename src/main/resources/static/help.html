@@ -7,6 +7,9 @@
 
 <p>--------------------- Start Here --------------------------~Help Student</p>
 
+
+
+
 <div style="border:none;border-bottom:solid #FCDBDB 1.0pt;padding:0in 0in 0in 0in;">
     <h1 style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;border:none;padding:0in;font-size:24px;font-family:"Century Gothic",sans-serif;color:#F24F4F;font-weight:normal;'>Help.html</h1>
 </div>
@@ -44,47 +47,442 @@
     <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>3.create <strong>StudentMongoRepository&nbsp;</strong>extends <strong>MongoRepository</strong></p>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>4.Create <strong>StudentMongoController.java</strong></p>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong><u><span style="color:red;">How can Spring Boot work without driver configuration?</span></u></strong></p>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong><u><span style="color:red;">Spring Boot with multiple databases Example?</span></u></strong></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>By default, Spring Boot will instantiate its default DataSource with the configuration properties prefixed by spring.datasource.*:</p>
-    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
-        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">//1<sup>st</sup> DB<br>spring.datasource.url = [url]<br>spring.datasource.username = [username]<br>&nbsp;spring.datasource.password = [password]</p>
-    </div>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br>&nbsp;We now want to keep on using the same way to configure the second DataSource, but with a different property namespace:</p>
-    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
-        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">//2<sup>nd</sup> DBs</p>
-        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">spring.secondDatasource.url = [url]<br>spring.secondDatasource.username = [username]<br>&nbsp;spring.secondDatasource.password = [password]</p>
-    </div>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br>&nbsp;Because we want the Spring Boot autoconfiguration to pick up those different properties (and actually instantiate two different DataSources), we need to instantiate our DataSource beans manually in a configuration class</p>
-    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
-        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">@Configuration<br>public class MultipleDataSourceConfiguration {<br><br>@Bean<br>@Primary<br>@ConfigurationProperties(prefix=&quot;spring.datasource&quot;)<br>public DataSource primaryDataSource() {<br>return DataSourceBuilder.create().build();<br>}<br><br>@Bean<br>@ConfigurationProperties(prefix=&quot;spring.secondDatasource&quot;)<br>public
-            DataSource secondaryDataSource() {<br>return DataSourceBuilder.create().build();<br>}<br>&nbsp;}</p>
-    </div>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.baeldung.com/spring-data-jpa-multiple-databases">https://www.baeldung.com/spring-data-jpa-multiple-databases</a></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>SpringRest vs SpringMVC , where what can use?</p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br><br>SpringBoot AOP<br>SpringBoot Security<br>SpringBoot MicroServices<br>&nbsp;Reactive JavaRx</p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
-
-
-
-
-
-
+    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong><u><span style="color:red;">How can Spring Boot work without driver configuration?</span></u></strong><code style='font-family:"Courier New";'><span style="font-size:14px;font-family:Consolas;color:#305CB5;border:solid #E1E1E8 1.0pt;padding:2.0pt;background:#F7F7F9;">&nbsp;</span></code></p>
+    <p
+        style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Spring Boot gives you defaults on all things, the default in database is <strong>H2</strong>, so when you want to change this and use any other database you must define the connection attributes in the <strong>application.properties</strong> file.</p>
+        <ul>
+            <li>H2 is one of the popular in memory databases. Spring Boot has default integration for H2</li>
+            <li>&nbsp;is live only during the time of execution of the application, not for real world applications</li>
+            <li>The <code style='font-family:"Courier New";'>h2-*.jar</code> is just an engine (the code) of the database. It is read-only and it does not store any information. The data in H2 can be stored either in memory or on disk in a specified file.
+                You are actually specifying one:</li>
+        </ul>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>In our Application we are using MySQL, so we &nbsp;provided details with out Driver detilas</p>
+        <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.url =&nbsp;</span>jdbc:mysql://<u>localhost</u>:3306/student?useSSL=false</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.username =&nbsp;</span>root</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.password =&nbsp;</span>root</p>
+        </div>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;text-indent:.5in;"><span style="color:teal;">&lt;</span>dependency<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>groupId<span style="color:teal;">&gt;</span><span style="color:black;">org.springframework.boot</span><span style="color:teal;">&lt;/</span>groupId<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>artifactId<span style="color:teal;">&gt;</span><span style="color:black;">spring-boot-starter-data-jpa</span><span style="color:teal;">&lt;/</span>artifactId<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;/</span>dependency<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>dependency<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>groupId<span style="color:teal;">&gt;</span><span style="color:black;">mysql</span><span style="color:teal;">&lt;/</span>groupId<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>artifactId<span style="color:teal;">&gt;</span><span style="color:black;">mysql-connector-java</span><span style="color:teal;">&lt;/</span>artifactId<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;</span>scope<span style="color:teal;">&gt;</span><span style="color:black;">runtime</span><span style="color:teal;">&lt;/</span>scope<span style="color:teal;">&gt;</span></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:teal;">&lt;/</span>dependency<span style="color:teal;">&gt;</span></p>
+        </div>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <ul style="margin-bottom:0in;">
+            <li><a href="https://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/api/org/springframework/boot/autoconfigure/EnableAutoConfiguration.html"><strong><span style="color:red;">@EnableAutoConfiguration</span></strong></a> : This annotation tells Spring
+                to automatically configure your application based on the dependencies that you have added in the <strong>pom.xml</strong> file.</li>
+        </ul>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <ul style="margin-bottom:0in;">
+            <li>For example, If <strong>spring-data-jpa</strong> or <strong>spring-jdbc</strong> is in the classpath, then it automatically tries to configure a <strong>DataSource</strong> by reading the database properties from <strong>application.properties</strong>                file.</li>
+        </ul>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <ul style="margin-bottom:0in;">
+            <li>So,in above we just have to add the configuration and Spring Boot will take care of the rest.</li>
+        </ul>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <ul style="margin-bottom:0in;">
+            <li>In the above properties file, the last two properties are for hibernate. Spring Boot uses Hibernate as the default JPA implementation.</li>
+        </ul>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <ul style="margin-bottom:0in;">
+            <li>If you remove mysql-connector-java from pom.xml, SpringBoot unable to find the MySQL related java classes in insert application.propeties values to create datasource, it will throw below error.</li>
+        </ul>
+        <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;margin-left:.5in;margin-right:0in;">
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">Failed to bind properties under &#39;&#39; to com.zaxxer.hikari.HikariDataSource:</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; Property: driverclassname</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; Value: com.mysql.cj.jdbc.Driver</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; Origin: &quot;driverClassName&quot; from property source &quot;source&quot;</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><strong><span style="font-size:12px;color:red;">Reason: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader</span></strong></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">Action:</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">Update your application&#39;s configuration</p>
+        </div>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>So finally, SpringBoot uses Drivers &amp; all normal stuff though @EnableAutoConfiguration to do the job</p>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+        <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>Spring Boot with multiple databases</h3>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>In Our StudentApp we have multiple Databases.</p>
+        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>1.if we use only one Database :MySQL we can use default <span style="font-family:Consolas;color:black;background:#E8F2FE;">spring.data.*</span>properties. Spring @EnableAutoConfiguration will create Datasource by reading these properties</p>
+        <div
+            style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.url =&nbsp;</span>jdbc:mysql://<u>localhost</u>:3306/student?useSSL=false</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.username =&nbsp;</span>root</p>
+            <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">spring.datasource.password =&nbsp;</span>root</p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>2.if we use two databases :MySQL, Mongo we can use default <span style="font-family:Consolas;color:black;background:#E8F2FE;">spring.data.*</span>properties of therir respective databases. Spring @EnableAutoConfiguration will create two different
+                Datasource by reading these properties</p>
+            <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">spring.data.mongodb.database=<span style="color:#2A00FF;">student</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">spring.data.mongodb.port=<span style="color:#2A00FF;">27017</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">spring.data.mongodb.host=<u><span style="color:#2A00FF;">localhost</span></u></p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>3.If we use two DB&rsquo;s with our own Config properties we need to Ovveride DataSource Manually</p>
+            <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">#----------- MySQL -------------</p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mysql.datasource.url =&nbsp;</span><span style="color:#2A00FF;">jdbc:mysql://<u>localhost</u>:3306/student?useSSL=false</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mysql.datasource.username =&nbsp;</span><span style="color:#2A00FF;">root</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mysql.datasource.password =&nbsp;</span><span style="color:#2A00FF;">root</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">#----------- MongoDB -------------</p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mongo.datasource.database=</span><span style="color:#2A00FF;">student</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mongo.datasource.port=</span><span style="color:#2A00FF;">27017</span></p>
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><span style="color:black;">own.spring.mongo.datasource.host=</span><u><span style="color:#2A00FF;">localhost</span></u></p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Because we want the Spring Boot autoconfiguration to pick up those different properties (and actually instantiate two different DataSources), we need to instantiate our DataSource beans manually in a configuration class</p>
+            <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">@Configuration<br>public class MultipleDataSourceConfiguration {<br><br>@Bean<br>@Primary<br>@ConfigurationProperties(prefix=&quot;own.spring.mysql.datasource&quot;)<br>public DataSource primaryDataSource() {<br>return DataSourceBuilder.create().build();<br>}<br><br>@Bean<br>@ConfigurationProperties(prefix=&quot;own.spring.mongo.datasource&quot;)<br>public
+                    DataSource secondaryDataSource() {<br>return DataSourceBuilder.create().build();<br>}<br>&nbsp;}</p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7">https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7</a></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="http://www.java2novice.com/spring-boot/configure-multiple-datasources/">http://www.java2novice.com/spring-boot/configure-multiple-datasources/</a></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.infoq.com/articles/Multiple-Databases-with-Spring-Boot">https://www.infoq.com/articles/Multiple-Databases-with-Spring-Boot</a></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>@Conditional&nbsp;&amp; @Profilers</strong></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>While developing Spring based applications we may come across a need to register beans conditionally.</p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>For example, you may want to register a DataSource bean pointing to the <strong>dev</strong> database abd different <strong>production database</strong> while running in production.&nbsp;</p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>To address this problem, Spring 3.1 introduced the concept of <strong>Profiles</strong>.<span style='font-size:19px;font-family:"Cambria",serif;color:#222635;background:white;'>&nbsp;</span>When you run the application you can activate the
+                desired profiles ,and only those beans of that profiles will be registered.</p>
+            <div style="border:solid #CCCCCC 1.0pt;padding:0in 3.0pt 0in 3.0pt;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Configuration</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span><span style='font-family:"Courier New";color:#770088;'>class</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span>
+                    <span
+                        style='font-family:"Courier New";color:blue;'>AppConfig</span>
+                </p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>{</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Bean</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Profile</span><span style='font-family:"Courier New";color:black;'>(</span><span style='font-family:"Courier New";color:#AA1111;'>&quot;DEV&quot;</span><span style='font-family:"Courier New";color:black;'>)</span></p>
+                <p
+                    style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;DataSource devDataSource() {</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;...</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;}</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Bean</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Profile</span><span style='font-family:"Courier New";color:black;'>(</span><span style='font-family:"Courier New";color:#AA1111;'>&quot;PROD&quot;</span><span style='font-family:"Courier New";color:black;'>)</span></p>
+                    <p
+                        style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;DataSource prodDataSource() {</span></p>
+                        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;...</span></p>
+                        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;}</span></p>
+                        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>}</span></p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Then you can specify the active profile using System Property <strong>-Dspring.profiles.active=DEV</strong></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Now we can configure both <strong>JdbcUserDAO&nbsp;</strong>and <strong>MongoUserDAO&nbsp;</strong>beans conditionally using <strong>@Conditional</strong>as follows:</p>
+            <div style="border:solid #CCCCCC 1.0pt;padding:0in 3.0pt 0in 3.0pt;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Configuration</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span><span style='font-family:"Courier New";color:#770088;'>class</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span>
+                    <span
+                        style='font-family:"Courier New";color:blue;'>AppConfig</span>
+                </p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>{</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Bean</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Conditional</span><span style='font-family:"Courier New";color:black;'>(MySQLDatabaseTypeCondition.</span><span style='font-family:"Courier New";color:#770088;'>class</span>
+                    <span
+                        style='font-family:"Courier New";color:black;'>)</span>
+                </p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;UserDAO jdbcUserDAO(){</span></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>return</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span><span style='font-family:"Courier New";color:#770088;'>new</span><span style='font-family:"Courier New";color:black;'>&nbsp;JdbcUserDAO();</span></p>
+                <p
+                    style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;}</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Bean</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#555555;'>@Conditional</span><span style='font-family:"Courier New";color:black;'>(MongoDBDatabaseTypeCondition.</span><span style='font-family:"Courier New";color:#770088;'>class</span>
+                        <span
+                            style='font-family:"Courier New";color:black;'>)</span>
+                    </p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>public</span><span style='font-family:"Courier New";color:black;'>&nbsp;UserDAO mongoUserDAO(){</span></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:#770088;'>return</span><span style='font-family:"Courier New";color:black;'>&nbsp;</span><span style='font-family:"Courier New";color:#770088;'>new</span><span style='font-family:"Courier New";color:black;'>&nbsp;MongoUserDAO();</span></p>
+                    <p
+                        style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>&nbsp;}</span></p>
+                        <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;border:none;padding:0in;'><span style='font-family:"Courier New";color:black;'>}</span></p>
+            </div>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong><span style="color:red;">How EnableAutoConfiguration implemented?</span></strong></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><span style="color:#333333;background:white;">auto-configuration is implemented with standard&nbsp;</span><code style='font-family:"Courier New";border-radius: 4px;font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;word-spacing:0px;'><span style='font-family:"Segoe UI",sans-serif;color:#6D180B;border:solid #CCCCCC 1.0pt;padding:1.0pt;background:#F2F2F2;'>@Configuration</span></code>
+                <span
+                    style="color:#333333;background:white;">&nbsp;classes. Additional&nbsp;</span><code style='font-family:"Courier New";border-radius: 4px;font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;word-spacing:0px;'><span style='font-family:"Segoe UI",sans-serif;color:#6D180B;border:solid #CCCCCC 1.0pt;padding:1.0pt;background:#F2F2F2;'>@Conditional</span></code>
+                    <span
+                        style="color:#333333;background:white;">&nbsp;annotations are used to constrain when the auto-configuration should apply<span style='font-size:18px;font-family:"Helvetica",sans-serif;color:#333333;background:white;'>.</span></span>
+            </p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>SpringBoot Security</h3>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.devglan.com/spring-security/spring-boot-security-hibernate-login-example">https://www.devglan.com/spring-security/spring-boot-security-hibernate-login-example</a></p>
+            <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://grokonez.com/spring-framework/spring-security/use-spring-security-jdbc-authentication-mysql-spring-boot">https://grokonez.com/spring-framework/spring-security/use-spring-security-jdbc-authentication-mysql-spring-boot</a></p>
+            <p
+                style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>SpringBoot AOP</h3>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="http://www.springboottutorial.com/spring-boot-and-aop-with-spring-boot-starter-aop">http://www.springboottutorial.com/spring-boot-and-aop-with-spring-boot-starter-aop</a></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.javainuse.com/spring/spring-boot-aop">https://www.javainuse.com/spring/spring-boot-aop</a></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br>&nbsp;<span style='font-family:"Century Gothic",sans-serif;color:black;font-weight:bold;text-decoration:underline;'><span style="font-size:19px;">SpringBoot MicroServices</span></span><br><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.dineshonjava.com/microservices-with-spring-boot/">https://www.dineshonjava.com/microservices-with-spring-boot/</a></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://spring.io/blog/2015/07/14/microservices-with-spring">https://spring.io/blog/2015/07/14/microservices-with-spring</a></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>Reactive JavaRx</h3>
+                <ul>
+                    <li>Reactive comes from the word react, which means to <strong>react to changes</strong> in the state instead of actually doing the state change.</li>
+                    <li>The reactive model listens to changes in the event and runs the relevant code accordingly.</li>
+                    <li><strong><span style="background:white;">observer/subscriber</span></strong><span style="background:white;">&nbsp;attached listening to the stream would receive the data.</span></li>
+                </ul>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>The basic building blocks of RxJava are:</p>
+                <ul style="margin-bottom:0in;margin-top:0in;" type="disc">
+                    <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>Observables</strong>: That emits data streams</li>
+                    <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>Observers and Subscribers</strong>: That consume the data stream. The only difference between an Observer and a Subscriber is that a Subscriber class has the methods to unsubscribe/resubscribe independently without the need
+                        of the observerable methods.</li>
+                    <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>Operators</strong>: That transform the data stream</li>
+                </ul>
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://cdn.journaldev.com/wp-content/uploads/2018/02/rxjava-basics-flow.png"><span style="color:black;text-decoration:none;">&nbsp;<img src="https://s3-eu-west-1.amazonaws.com/froala-eu/temp_files%2F1549739607112-1549739607112.png" style="width: 358.5pt; height: 325.5pt;" class="fr-fic fr-dib"></span></a></p>
+                <p
+                    style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://cdn.journaldev.com/wp-content/uploads/2018/02/rxjava-basics-flow.png">https://cdn.journaldev.com/wp-content/uploads/2018/02/rxjava-basics-flow.png</a></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>SpringBoot &ndash; Reactive Programming</h3>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.baeldung.com/spring-webflux">https://www.baeldung.com/spring-webflux</a></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://www.journaldev.com/20763/spring-webflux-reactive-programming">https://www.journaldev.com/20763/spring-webflux-reactive-programming</a></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>AngularJs(<span style="font-size:13px;color:red;">Angular 1</span>) vs Angular (<span style="font-size:13px;color:#0070C0;">Angular 2</span>)</h3>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><img src="https://s3-eu-west-1.amazonaws.com/froala-eu/temp_files%2F1549739607428-1549739607428.png" style="width: 468pt; height: 374.25pt;" class="fr-fil fr-dib"></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><img src="https://s3-eu-west-1.amazonaws.com/froala-eu/temp_files%2F1549739607745-1549739607745.png" style="width: 468pt; height: 468pt;" class="fr-fil fr-dib"></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>What exactly node.js is?</h3>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Is it a web server or a programming language for server-side scripts?</p>
+                    <ul>
+                        <li>So here&rsquo;s how it is, how it&rsquo;s always been: a browser sends a request to a website. The site&rsquo;s server receives the request, tracks down the requested file, performs any database queries as needed, and sends a response
+                            to the browser. In traditional web servers, such as Apache, each request causes the server to create a new system process to handle that request</li>
+                        <li>Now think about what that means for a traditional web server like Apache. For each and every user connected to the site, your server has to keep a connection open. Each connection requires a process, and each of those processes
+                            will spend most of its time either sitting idle (consuming memory) or waiting on a database query to complete. This means that it&rsquo;s hard to scale up to high numbers of connections without grinding to a near halt and using
+                            up all your resources.</li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <ul style="margin-bottom:0in;">
+                        <li>So what&rsquo;s the solution? Here&rsquo;s where some of that jargon from before comes into play: specifically <strong>non-blocking</strong> and <strong>event-driven</strong></li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <ul style="margin-bottom:0in;">
+                        <li>Think of <strong>a non-blocking</strong> server as a loop: it just keeps going round and round. A request comes in, the loop grabs it, passes it along to some other process (like a database query), sets up a callback, and keeps
+                            going round, ready for the next request. It doesn&rsquo;t just sit there, waiting for the database to come back with the requested info.</li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <ul style="margin-bottom:0in;">
+                        <li>If the database query comes back &mdash; fine, we&rsquo;ll deal with that the same way: throw a response back to the client and keep looping around. There&rsquo;s theoretically no limit on how many database queries you can be waiting
+                            on, or how many clients have open requests, because you&rsquo;re not spending any time waiting for them. You deal with them all in their own time</li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:.5in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <ul style="margin-bottom:0in;">
+                        <li><strong>event-driven means</strong>: the server only reacts when an event occurs. That could be a request, a file being loaded, or a query being executed &mdash; it really doesn&rsquo;t matter.</li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>How to host node.js applications?</h3>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>You need to Host AWS or Google Cloud or any other cloud platform because it needs Node.js to be installed.</p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h3 style='margin-top:.25in;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:19px;font-family:"Century Gothic",sans-serif;color:black;text-decoration:underline;'>Npm, bower packges</h3>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Let&rsquo;s understand by Example</p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>I used the complete <strong><a href="http://mean.io/" target="_blank" title="MEAN">MEAN</a></strong> stack for this series</p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong><span style="color:red;">MEAN</span></strong><span style="color:red;">&nbsp;</span>is a set of Open Source components that together, provide an end-to-end framework for building dynamic web applications;&nbsp;</p>
+                    <ul style="margin-bottom:0in;margin-top:0in;"
+                        type="disc">
+                        <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>M</strong>ongoDB : Document database &ndash; used by your back-end application to store its data as JSON (JavaScript Object Notation) documents</li>
+                        <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>E</strong>xpress (sometimes referred to as Express.js): Back-end web application framework running on top of Node.js</li>
+                        <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>A</strong>ngular (formerly Angular.js): Front-end web app framework; runs your JavaScript code in the user&rsquo;s browser, allowing your application UI to be dynamic</li>
+                        <li style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>N</strong>ode.js : JavaScript runtime environment &ndash; lets you implement your application back-end in JavaScript</li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>1.create <strong><span style="color:red;">package.json</span></strong><span style="color:red;">&nbsp;</span>to install some Node packages.(like maven, here we can see <strong><span style="color:red;">express.js</span></strong>
+                        <span
+                            style="color:red;">&nbsp;</span>dependency)</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">//package.json</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">{</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &quot;name&quot;: &quot;node-rest-auth&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &quot;main&quot;: &quot;server.js&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp;&quot;dependencies&quot;: {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &quot;bcrypt&quot;: &quot;^0.8.5&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp;&quot;body-parser&quot;: &quot;~1.9.2&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><strong><span style="font-size:13px;color:red;">&quot;express&quot;: &quot;~4.9.8&quot;,</span></strong></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp;&quot;jwt-simple&quot;: &quot;^0.3.1&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &quot;mongoose&quot;: &quot;~4.2.4&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &quot;morgan&quot;: &quot;~1.5.0&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &quot;passport&quot;: &quot;^0.3.0&quot;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp;&quot;passport-jwt&quot;: &quot;^1.2.1&quot;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">}</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>To install pacakges Run</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><strong><span style="font-size:13px;color:red;">npm install</span></strong></p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>This will install all our modules to <strong>node_modules/</strong>.</p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>We can also install one by one without package.json as below, it will get latest version of it</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">npm install mongojs</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">npm install express&nbsp;</p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>2.create <strong><span style="color:red;">server.js</span></strong>, here we import all the needed elements and create our server with url localhost:9090</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var express &nbsp; &nbsp; = require(&#39;express&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var app &nbsp; &nbsp; &nbsp; &nbsp; = express();</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var bodyParser &nbsp;= require(&#39;body-parser&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var morgan &nbsp; &nbsp; &nbsp;= require(&#39;morgan&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var mongoose &nbsp; &nbsp;= require(&#39;mongoose&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var passport = require(&#39;passport&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var config &nbsp; &nbsp; &nbsp;= require(&#39;./config/database&#39;); // get db config file</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var User &nbsp; &nbsp; &nbsp; &nbsp;= require(&#39;./app/models/user&#39;); // get the mongoose model</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var port &nbsp; &nbsp; &nbsp; &nbsp;= process.env.PORT || 9090;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var jwt &nbsp; &nbsp; &nbsp; &nbsp; = require(&#39;jwt-simple&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// get our request parameters</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.use(bodyParser.urlencoded({ extended: false }));</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.use(bodyParser.json());</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// log to console</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.use(morgan(&#39;dev&#39;));</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// Use the passport package in our application</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.use(passport.initialize());</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// demo Route (GET <strong><span style="color:red;">http://localhost:9090</span></strong>)</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.get(&#39;/&#39;, function(req, res) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; res.send(&#39;Hello! The API is at http://localhost:&#39; + port + &#39;/api&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">});</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// Start the server</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">app.listen(port);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">console.log(&#39;There will be dragons: http://localhost:&#39; + port);</p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>3.config/database.js</strong></p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">module.exports = {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &#39;secret&#39;: &#39;devdacticIsAwesome&#39;,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &#39;database&#39;: &#39;mongodb://localhost/node-rest-auth&#39;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">};</p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>4.<span style='font-size:18px;font-family:"Arial",sans-serif;color:#333333;background:white;'>&nbsp;</span>user model for our user authentication</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><strong><span style="color:red;">//app/models/user.js</span></strong></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var mongoose = require(&#39;mongoose&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var Schema = mongoose.Schema;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var bcrypt = require(&#39;bcrypt&#39;);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// Thanks to http://blog.matoski.com/articles/jwt-express-node-mongoose/</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">// set up a mongoose model</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">var UserSchema = new Schema({</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; name: {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; type: String,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; unique: true,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; required: true</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; },</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; password: {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; type: String,</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; required: true</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">});</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">UserSchema.pre(&#39;save&#39;, function (next) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; var user = this;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; if (this.isModified(&#39;password&#39;) || this.isNew) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; bcrypt.genSalt(10, function (err, salt) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (err) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return next(err);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bcrypt.hash(user.password, salt, function (err, hash) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (err) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return next(err);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;user.password = hash;</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; next();</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; });</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; } else {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; return next();</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">});</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">UserSchema.methods.comparePassword = function (passw, cb) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; bcrypt.compare(passw, this.password, function (err, isMatch) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; if (err) {</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return cb(err);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; &nbsp; &nbsp; cb(null, isMatch);</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">&nbsp; &nbsp; });</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">};</p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><br></p>
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;">module.exports = mongoose.model(&#39;User&#39;, UserSchema);</p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Now the basics are set up, and you can start our server from now on just with</p>
+                    <div style="border:solid gray 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#F2F2F2;">
+                        <p style="margin:0in;margin-bottom:.0001pt;background:#F2F2F2;border:none;padding:0in;font-size:11px;font-family:Consolas;color:black;"><strong><span style='font-size:15px;font-family:"Courier New";color:red;background:ghostwhite;'>node&nbsp;</span></strong><strong><span style='font-size:15px;font-family:"Courier New";color:red;background:ghostwhite;'><span style="height:inherit;">server</span></span></strong><strong><span style='font-size:15px;font-family:"Courier New";color:red;background:ghostwhite;'><span style="height:inherit;">.js</span></span></strong></p>
+                    </div>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><a href="https://devdactic.com/restful-api-user-authentication-1/">https://devdactic.com/restful-api-user-authentication-1/</a></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <h4 style='margin-top:12.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:0in;font-size:16px;font-family:"Century Gothic",sans-serif;color:#C00000;text-decoration:underline;'>Now NPM vs &nbsp;Bower</h4>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>Npm and Bower are both <strong>dependency management tools</strong>. But the main difference between both is&nbsp;</p>
+                    <ul>
+                        <li><strong>npm is used for installing&nbsp;</strong><strong><span style="color:red;">Node js modules&nbsp;</span></strong></li>
+                        <li><strong>bower is used for managing&nbsp;</strong><strong><span style="color:red;">front end components like html, css, js etc</span></strong></li>
+                    </ul>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><span style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;background:white;'>running&nbsp;</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#242729;border:none windowtext 1.0pt;padding:0in;background:#EFF0F1;">bower install</span></code>
+                        <span
+                            style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;background:white;'>&nbsp;will fetch the package and put it in&nbsp;</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#242729;border:none windowtext 1.0pt;padding:0in;background:#EFF0F1;">/vendor</span></code>
+                            <span
+                                style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;background:white;'>&nbsp;directory,</span><span style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;'><br>&nbsp;<span style="background:white;">running&nbsp;</span></span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#242729;border:none windowtext 1.0pt;padding:0in;background:#EFF0F1;">npm install</span></code>
+                                <span
+                                    style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;background:white;'>&nbsp;it will fetch it and put it into&nbsp;</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#242729;border:none windowtext 1.0pt;padding:0in;background:#EFF0F1;">/node_modules</span></code>
+                                    <span
+                                        style='font-size:15px;font-family:"Arial",sans-serif;color:#242729;background:white;'>&nbsp;directory.</span>
+                    </p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><strong>Grunt</strong> is quite different from Npm and Bower. Grunt is a javascript task runner tool. You can do a lot of things using grunt which you had to do manually otherwise</p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'>There are grunt plugins for <strong>compilation, uglifying your javascript, copy files/folders, minifying javascript etc.</strong></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
+                    <p style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;font-size:13px;font-family:"Segoe UI",sans-serif;color:black;'><br></p>
 
 
 
