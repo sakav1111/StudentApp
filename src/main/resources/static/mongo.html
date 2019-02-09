@@ -1,0 +1,70 @@
+<div class="card" ng-controller="mongoController">
+  <div class="card-header">
+    Student Form Mongo
+  </div>
+  <div class="card-body">
+     <form >
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Sno</label>
+    <input type="text" class="form-control" id="sno" ng-model="mongoForm.sno">   
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="name" ng-model="mongoForm.name">   
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">City</label>
+    <input type="text" class="form-control" id="city" ng-model="mongoForm.city" >   
+  </div>
+  
+ 
+  
+ <div class="form-group">
+    <label for="exampleInputEmail1">Marks</label>
+    <input type="text" class="form-control" id="marks" ng-model="mongoForm.marks">   
+  </div> 
+
+  
+  <button type="button" class="btn btn-primary" ng-click="mongoSave()">Save</button>
+  <button type="button" class="btn btn-success" ng-click="mongoUpdate()">Update</button>
+  <button type="button" class="btn btn-danger"  ng-click="mongoDelete()">Delete</button>
+  <button type="button" class="btn btn-danger"  ng-click="mongoDeleteByName()">DeleteByName</button>
+  <button type="button" class="btn btn-info btn-lg btn-block" ng-click="mongoGet()">Get</button>
+  
+  
+  <div class="form-group">
+  <p>Status</p>
+    <label for="exampleInputEmail1">{{student.sno}} ||| {{status}}  </label>     
+  </div>
+
+		</form> 
+	
+   
+  </div><!--  Form End-->
+ 
+  
+ <div class="card-header">
+    Show All By Defalut 
+  </div>
+  <div class="card-body">
+      <table class="table">
+  <thead class="thead-dark">
+    <tr ng-repeat="student in mongoStudentsList">
+      <td>{{ student.sno }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.city }}</td>
+      <td>{{ student.marks }}</td>
+      <td><button type="button" class="btn btn-info" ng-click="mongoIdforTable(student.sno)">Get</button></td>
+     
+  </tr>
+  </thead>
+ <!-- =============== content here  -->
+  </tbody>
+</table>
+   
+  </div>
+</div>

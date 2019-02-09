@@ -42,6 +42,9 @@ app.config(function($routeProvider) {
 	}).when('/search', {
 		templateUrl : 'search.html',
 		controller : 'searchController'
+	}).when('/mongo', {
+		templateUrl : 'mongo.html',
+		controller : 'mongoController'
 	}).when('/help', {
 		templateUrl : 'help.html',
 		controller : 'helpController'
@@ -247,3 +250,10 @@ app.controller('searchController', function($scope, $http) {
 app.controller('helpController', function($scope) {
 	$scope.title = "Help Student";
 });
+
+
+
+
+
+
+
